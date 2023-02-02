@@ -1,0 +1,362 @@
+/* common */
+
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: rgb(250, 244, 227);
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-family: Rockwell;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity .3s;
+}
+
+a:hover {
+  opacity: .5;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.container {
+  margin: 0 16px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+
+header {
+  padding: 12px 0 8px;
+  background: rgb(250, 244, 227);
+}
+
+header h1 {
+  font-family: Rockwell;
+  font-size: 30px;
+}
+
+header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  margin-top: 8px;
+}
+
+header input,
+header button {
+  all: unset;
+}
+
+header input {
+  border-bottom: 2px solid black;
+  padding: 4px;
+  width: 350px;
+}
+
+header button {
+  cursor: pointer;
+}
+
+header li + li {
+  margin-left: 18px;
+}
+
+header .cart a i {
+  font-size: 24px;
+}
+
+header .cart a {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* hero */
+
+.hero {
+  min-height: 650px;
+  background-image: url(../img/hero1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 5rem;
+  text-transform: uppercase;
+  position: absolute;
+}
+
+.home-content {
+  width: 300px;
+}
+
+.hero h2 {
+  font-size: 4rem;
+  font-family: Rockwell;
+  margin: 45% 0 0px;
+  text-shadow: 0 0 20px white;
+}
+
+.hero p {
+  font-size: 20px;
+  width: 400px;
+  margin: 8% auto 0;
+  line-height: 1.8;
+  text-shadow: 0 0 20px white;
+}
+
+/* products */
+
+.products {
+  margin-top: 800px;
+  padding: 80px 0;
+}
+
+.products ul {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.products li {
+  width: calc((100% - 16px) / 2);
+}
+
+.products li img {
+  width: 100%;
+}
+
+.products li h2 {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.products li a {
+  display:block;
+}
+
+.products .more {
+  display: block;
+  width: 70%;
+  line-height: 48px;
+  text-align: center;
+  margin: 32px auto 0;
+  color: #eee;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* explanation */
+
+.explanation {
+  padding: 12px 0 32px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.explanation h1 {
+  font-size: 32px;
+  text-shadow: 0 0 20px white;
+}
+
+.explanation p {
+  text-shadow: 0 0 20px white;
+}
+
+.explanation ul {
+  text-align: center;
+}
+
+.explanation li {
+  line-height: 1.2;
+}
+
+.explanation li + li {
+  padding-top: 80px;
+}
+
+.explanation img {
+  width: 200px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* page_top */
+
+#page_top{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  margin: 40px;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: black;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+#page_top a::after{
+  content: 'PAGE TOP';
+  font-size: 13px;
+  color: #fff;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: black;
+}
+
+/* footer */
+
+footer {
+  background: black;
+  padding: 16px 0;
+  color: #eee;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer small {
+  font-size: 16px;
+}
+
+footer li i {
+  font-size: 24px;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer li + li {
+  margin-left: 8px;
+}
+
+/* medium screen */
+
+@media (min-width: 600px) {
+
+  .container {
+    max-width: 1000px;
+  }
+
+  header input {
+    width: 200px;
+  }
+
+  .hero {
+    background-image: url(../img/hero2.jpg);
+  }
+
+  .products li {
+    width: calc((100% - 32px) / 3);
+  }
+
+  .products .more {
+    width: 60%;
+  }
+
+  .explanation {
+    width: auto;
+    margin-left: 10%;
+  }
+
+  .explanation ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .explanation li {
+    width: 500px;
+    line-height: 1.5;
+  }
+
+/* large screen */
+
+@media (min-width: 800px) {
+
+  .container {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  header .container {
+    display: flex;
+  }
+
+  header h1 {
+    font-size: 50px;
+  }
+
+  header form {
+    display: block;
+  }
+
+  .hero h2 {
+    margin: 20% 0 0px;
+  }
+  
+  .hero p {
+    margin: 4% auto 0;
+  }
+
+  .products .more {
+    width: 50%;
+  }
+}
+}
